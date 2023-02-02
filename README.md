@@ -1,3 +1,8 @@
+### 소개
+- 안녕하세요 프론트엔드 개발자 신민수입니다.
+- 선택이 아닌 필수인 TypeScript를 배우기 위해 신청하였습니다.
+- [과제 배포 사이트](https://minsoo7044.github.io/wanted-pre-onboarding-challenge-fe-2/)
+
 ## 챌린지 과제 가이드
 
 >요구 사항을 구현하지 않고 설계만합니다.
