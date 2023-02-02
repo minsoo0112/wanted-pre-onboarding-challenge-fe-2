@@ -1,51 +1,54 @@
 /**
- * Represents a book.
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * Todo 객체
+ * @typedef {Object}Todo
+ * @property {number} id - 아이디, required
+ * @property {string} content - 내용, required
+ * @property {boolean} iscompleted - 완료여부, required
+ * @property {string} category - 카테고리, required
+ * @property {string[]} tags - 태그들, optional
  */
-function Book(title, author) {}
 
 /**
- * Both of these will link to the bar function.
- * @see {@link bar}
- * @see bar
+ * Todo 생성
+ * @param {Todo} - 추가할 todo 객체 
+ * @throws {Error} - content가 없을 때 에러 리턴
  */
-function foo() {}
-
-// Use the inline {@link} tag to include a link within a free-form description.
-/**
- * @see {@link foo} for further information.
- * @see {@link http://github.com|GitHub}
- */
-function bar() {}
+function createTodo(todo) {}
 
 /**
- * Generic dairy product.
- * @constructor
+ * Todo 조회
+ * @param {number="all"} id - 조회할 id값, 디폴트는 all
+ * @returns {Todo[]} Todo 배열
  */
-function DairyProduct() {}
+function getTodos(id) {}
 
 /**
- * Check whether the dairy product is solid at room temperature.
- * @abstract
- * @return {boolean}
+ * 특정 Todo의 데이터 수정
+ * @param {Todo} - 수정된 todo 객체
+ * @throws {Error} - id가 바뀌면 에러 리턴
  */
-DairyProduct.prototype.isSolid = function () {
-	throw new Error('must be implemented by subclass!');
-};
+function updateTodo(todo) {}
 
 /**
- * Cool, refreshing milk.
- * @constructor
- * @augments DairyProduct
+ * 모든 todo 삭제
  */
-function Milk() {}
+function deleteTodos() {}
 
 /**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
+ * 특정 todo 삭제
+ * @param {number} id - 삭제할 todo의 id
  */
-Milk.prototype.isSolid = function () {
-	return false;
-};
+function deleteTodo(id) {}
+
+/**
+ * 특정 todo의 모든 tag 삭제
+ * @param {number} id - 삭제할 todo의 id
+ */
+function deleteAllTags(id) {}
+
+/**
+ * 특정 todo의 특정 tag 삭제
+ * @param {number} id - 삭제할 todo의 id
+ * @param {string} tag - 삭제할 tag의 값
+ */
+function deleteTag(id, tag) {}
